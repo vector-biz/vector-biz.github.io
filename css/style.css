@@ -47,10 +47,13 @@ nav {
 }
 
 .hero {
-    background: linear-gradient(rgba(15,29,58,0.75), rgba(15,29,58,0.75)), url('../bg.jpg') center/cover no-repeat;
-    color: white;
-    padding: 140px 20px;   /* Большой hero как раньше */
+    background: linear-gradient(rgba(15,29,58,0.75), rgba(15,29,58,0.75)), 
+                url('../bg.jpg') no-repeat center center / cover;
+    color: #fff;
+    padding: 100px 20px;
     text-align: center;
+    min-height: 60vh; /* Чтобы фон был заметен */
+}
 }
 
 .hero h1 {

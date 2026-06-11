@@ -19,29 +19,58 @@
                 <a href="contacts.html">Контакти</a></li>
          </div>
     </nav>
-   <form class="contact-form"> 
-        <div class="form-group">
-            <label for="name">Ім’я</label>
-            <input type="text" id="name" placeholder="Введіть ваше ім'я" required> 
+   <section class="contacts-section">
+    <div class="contacts-wrapper">
+        
+        <!-- ЛЕВАЯ СТОРОНА: Информация и контакты -->
+        <div class="contacts-info-side">
+            <span class="sub-title">Зворотній зв'язок</span>
+            <h1>Зв'яжіться з нами</h1>
+            <p class="section-desc">Маєте запитання щодо роботи ОСББ чи пропозиції? Напишіть нам або зателефонуйте. Ми завжди раді допомогти.</p>
+            
+            <div class="info-cards-grid">
+                <div class="info-card">
+                    <div class="card-icon">📞</div>
+                    <div class="card-text">
+                        <span>Телефон для зв'язку</span>
+                        <a href="tel:+380000000000">+38 XXX XXX XX XX</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon">⏰</div>
+                    <div class="card-text">
+                        <span>Режим роботи</span>
+                        <strong>Пн - Пт: 9:00 - 18:00</strong>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="example@mail.com" required> 
+        <!-- ПРАВАЯ СТОРОНА: Современная симметричная форма -->
+        <div class="contacts-form-side">
+            <form class="premium-form">
+                <div class="input-wrapper">
+                    <input type="text" id="p-name" required placeholder=" ">
+                    <label for="p-name">Ваше ім'я</label>
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="email" id="p-email" required placeholder=" ">
+                    <label for="p-email">Електронна пошта (Email)</label>
+                </div>
+
+                <div class="input-wrapper">
+                    <textarea id="p-msg" required placeholder=" " rows="5"></textarea>
+                    <label for="p-msg">Текст вашого повідомлення</label>
+                </div>
+
+                <button type="submit" class="premium-btn">
+                    <span>Надіслати повідомлення</span>
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l21.187-7.062c.528-.177.744.043.568.57L16.56 23.414c-.177.534-.46.528-.635-.007l-3.513-10.54-10.466-3.552zm16.527-4.498L6.75 11.207l7.733 2.624 3.99-9.014z"/></svg>
+                </button>
+            </form>
         </div>
 
-        <div class="form-group">
-            <label for="message">Повідомлення</label>
-            <textarea id="message" placeholder="Ваше повідомлення..." rows="5" required></textarea> 
-        </div>
-
-        <button type="submit">Надіслати</button> 
-    </form> 
-
-    <div class="contact-info">
-        <p><strong>Телефон:</strong> <a href="tel:+380000000000">+38 XXX XXX XX XX</a></p> 
     </div>
-</div>
-
-</body>
-</html>
+</section>

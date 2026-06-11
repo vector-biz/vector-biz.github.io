@@ -4,5 +4,5 @@ function changeLang(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('OSBB Vector');
+    console.log('TOV Vector');
 });

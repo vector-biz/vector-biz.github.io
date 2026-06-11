@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://sitemaps.org">
+  <url>
+    <loc>https://vector-biz.pp.ua</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vector-biz.pp.uacontacts.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vector-biz.pp.uadocuments.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vector-biz.pp.uagallery.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vector-biz.pp.uaindex.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vector-biz.pp.uanews.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vector-biz.pp.uapayments.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vector-biz.pp.uasecurity.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>

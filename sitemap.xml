@@ -5,31 +5,31 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vector-biz.pp.uacontacts.html</loc>
+    <loc>https://vector-biz.pp.ua/contacts.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vector-biz.pp.uadocuments.html</loc>
+    <loc>https://vector-biz.pp.ua/documents.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vector-biz.pp.uagallery.html</loc>
+    <loc>https://vector-biz.pp.ua/gallery.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vector-biz.pp.uaindex.html</loc>
+    <loc>https://vector-biz.pp.ua/index.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vector-biz.pp.uanews.html</loc>
+    <loc>https://vector-biz.pp.ua/news.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vector-biz.pp.uapayments.html</loc>
+    <loc>https://vector-biz.pp.ua/payments.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vector-biz.pp.uasecurity.html</loc>
+    <loc>https://vector-biz.pp.ua/security.html</loc>
     <priority>0.8</priority>
   </url>
 </urlset>

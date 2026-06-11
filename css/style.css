@@ -1,10 +1,8 @@
 :root {
     --primary: #0f1d3a;
     --accent: #d4af37;
-    --light: #f8f9fa;
 }
 
-/* Глобальный сброс */
 *,
 *::before,
 *::after {
@@ -13,20 +11,12 @@
 
 body {
     margin: 0;
-    padding: 0;
     font-family: Segoe UI, Arial, sans-serif;
-    background: var(--light);
-    line-height: 1.6;
+    background: #f8f9fa;
     color: #333;
+    line-height: 1.6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* Навигация */
 nav {
     background: var(--primary);
     position: sticky;
@@ -41,86 +31,105 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px 20px;
-    color: #fff;
+    color: white;
     flex-wrap: wrap;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
+.nav strong {
+    font-size: 1.4em;
 }
 
-/* Hero и основные блоки */
-.hero, .main-content, section {
-    padding: 40px 20px;
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 1.05em;
+}
+
+.hero {
+    background: linear-gradient(rgba(15,29,58,0.75), rgba(15,29,58,0.75)), url('../bg.jpg') center/cover no-repeat;
+    color: white;
+    padding: 140px 20px;   /* Большой hero как раньше */
     text-align: center;
 }
 
-h1, h2, h3 {
-    color: var(--primary);
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
-/* Карточки и контент */
-.card, .section-block {
-    background: #fff;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 15px;
 }
 
-/* Кнопки */
-.btn, button {
-    background: var(--accent);
-    color: #000;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Красиво на десктопе */
+    gap: 25px;
 }
 
-/* ==================== МОБИЛЬНАЯ ВЕРСИЯ ==================== */
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* ==================== МОБИЛЬНАЯ АДАПТАЦИЯ ==================== */
 @media (max-width: 768px) {
-    
     .nav {
         flex-direction: column;
-        gap: 12px;
         text-align: center;
+        gap: 15px;
     }
     
-    nav a {
+    .nav a {
         margin: 6px 0;
         display: block;
     }
 
+    .hero {
+        padding: 80px 15px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
     .container {
-        padding: 0 10px;
+        padding: 25px 10px;
     }
 
-    section, .hero, .main-content {
-        padding: 30px 10px;
+    /* Карточки в одну строку, как ты просил */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
     }
 
-    h1 { font-size: 28px !important; }
-    h2 { font-size: 24px !important; }
-    p, li { font-size: 16px !important; line-height: 1.55; }
-
-    .card, .section-block {
-        margin: 12px 0;
-        padding: 18px;
+    .card {
+        padding: 18px 10px;
     }
-
-    .btn, button {
-        width: 100%;
-        padding: 16px 20px;
-        font-size: 17px;
-        min-height: 52px;
+    
+    .card h3 {
+        font-size: 1.15em;
     }
-
-    img {
-        max-width: 100%;
-        height: auto;
+    
+    .card p {
+        font-size: 14.5px;
     }
 }

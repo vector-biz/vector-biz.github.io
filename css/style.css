@@ -112,6 +112,29 @@ footer {
     padding: 30px;
 }
 
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 12px;
+}
+
+.lang-btn {
+    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 0.92em;
+    cursor: pointer;
+}
+
+.lang-btn.active {
+    background: #d4af37;
+    color: #0f1d3a;
+    border-color: #d4af37;
+}
+
 /* MOBILE ADAPTATION */
 @media (max-width: 768px) {
     .nav {

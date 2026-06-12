@@ -75,6 +75,33 @@ function applyTranslations(lang = localStorage.getItem('lang') || 'uk') {
   });
 }
 
+function injectMobileMenu() {
+  const nav = document.querySelector('nav .nav');
+  if (!nav || nav.querySelector('.menu-toggle')) return;
+
+  const links = Array.from(nav.querySelectorAll('a'));
+  if (!links.length) return;
+
+  const linksWrapper = document.createElement('div');
+  linksWrapper.className = 'nav-links';
+  links.forEach((link) => linksWrapper.appendChild(link));
+
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'menu-toggle';
+  toggle.setAttribute('aria-label', 'Open menu');
+  toggle.innerHTML = '☰';
+
+  toggle.addEventListener('click', () => {
+    linksWrapper.classList.toggle('open');
+    toggle.classList.toggle('active');
+    toggle.setAttribute('aria-expanded', String(linksWrapper.classList.contains('open')));
+  });
+
+  nav.appendChild(toggle);
+  nav.appendChild(linksWrapper);
+}
+
 function injectLanguageSwitcher() {
   const nav = document.querySelector('nav .nav, nav');
   if (!nav || nav.querySelector('.lang-switcher')) return;
@@ -96,6 +123,7 @@ function injectLanguageSwitcher() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  injectMobileMenu();
   injectLanguageSwitcher();
   applyTranslations(localStorage.getItem('lang') || 'uk');
 

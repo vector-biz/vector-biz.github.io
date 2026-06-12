@@ -139,40 +139,53 @@ footer {
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
+        align-items: stretch;
         text-align: center;
-        gap: 15px;
+        gap: 10px;
+        padding: 10px 12px;
+    }
+
+    .nav strong {
+        font-size: 1.05em;
     }
 
     .nav a {
-        margin: 6px 0;
-        display: block;
+        margin: 2px 4px;
+        display: inline-block;
+        font-size: 0.95em;
+    }
+
+    .lang-switcher {
+        justify-content: center;
+        margin-left: 0;
     }
 
     .hero {
-        padding: 90px 15px 60px;
-        min-height: 50vh;
+        padding: 56px 12px 32px;
+        min-height: 36vh;
     }
 
     .hero h1 {
-        font-size: 2.4em;
-        margin-bottom: 16px;
+        font-size: 2em;
+        margin-bottom: 10px;
     }
 
     .hero p {
-        font-size: 1.25em;
+        font-size: 1.02em;
+        max-width: 100%;
     }
 
     .container {
-        padding: 25px 10px;
+        padding: 20px 10px;
     }
 
     .grid {
-        grid-template-columns: 1fr; /* One column on mobile */
-        gap: 15px;
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 
     .card {
-        padding: 20px 15px;
+        padding: 16px 12px;
     }
 }
 /* Обнуление для контейнера на всю страницу */
@@ -487,25 +500,53 @@ footer {
 
 /* Адаптивность для планшетов и телефонов */
 @media (max-width: 900px) {
-    .contacts-wrapper {
-        grid-template-columns: 1fr; /* Превращаем в одну колонку */
-        gap: 40px;
+    .contacts-section {
+        min-height: auto;
+        padding: 28px 10px;
     }
+
+    .contacts-wrapper {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
     .contacts-info-side {
         padding-right: 0;
         text-align: center;
     }
+
     .contacts-info-side h1 {
-        font-size: 32px;
+        font-size: 30px;
+        margin-bottom: 12px;
     }
+
+    .contacts-info-side .section-desc {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
     .info-cards-grid {
         align-items: center;
     }
+
     .info-card {
         width: 100%;
-        max-width: 400px;
+        max-width: 420px;
+        padding: 14px;
+        gap: 12px;
     }
+
     .contacts-form-side {
-        padding: 30px 20px;
+        padding: 18px 14px;
+        border-radius: 18px;
+    }
+
+    .premium-form {
+        gap: 16px !important;
+    }
+
+    .premium-btn {
+        padding: 14px !important;
+        font-size: 15px !important;
     }
 }

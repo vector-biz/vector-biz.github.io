@@ -90,7 +90,7 @@ function injectMobileMenu() {
   toggle.type = 'button';
   toggle.className = 'menu-toggle';
   toggle.setAttribute('aria-label', 'Open menu');
-  toggle.innerHTML = '☰';
+  toggle.innerHTML = '<span></span><span></span><span></span>';
 
   const closeMenu = () => {
     linksWrapper.classList.remove('open');
@@ -103,6 +103,7 @@ function injectMobileMenu() {
     linksWrapper.classList.toggle('open', willOpen);
     toggle.classList.toggle('active', willOpen);
     toggle.setAttribute('aria-expanded', String(willOpen));
+    toggle.setAttribute('aria-label', willOpen ? 'Close menu' : 'Open menu');
   });
 
   linksWrapper.querySelectorAll('a').forEach((link) => {
@@ -148,21 +149,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     status.textContent = 'Відправляємо повідомлення…';
     status.className = 'form-status visible';
+    status.classList.remove('success', 'error');
 
     try {
       const response = await fetch(form.action, {
         method: form.method,
         body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        headers: { Accept: 'application/json' }
       });
 
-      if (response.ok) {
-        form.reset();
-        status.textContent = 'Повідомлення надіслано. Дякуємо!';
-        status.classList.add('success');
-      } else {
-        throw new Error('Помилка відправки. Спробуйте ще раз.');
+      if (!response.ok) {
+        const data = await response.json().catch(() => null);
+        throw new Error(data?.error || 'Помилка відправки. Спробуйте ще раз.');
       }
+
+      form.reset();
+      status.textContent = 'Повідомлення надіслано. Дякуємо!';
+      status.classList.add('success');
     } catch (error) {
       status.textContent = error.message || 'Не вдалося надіслати повідомлення.';
       status.classList.add('error');

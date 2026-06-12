@@ -382,6 +382,26 @@ footer {
     transform: translateX(4px) translateY(-2px); /* Самолетик взлетает при наведении */
 }
 
+.form-status {
+    min-height: 22px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d1d1f;
+    display: none;
+}
+
+.form-status.visible {
+    display: block;
+}
+
+.form-status.success {
+    color: #15803d;
+}
+
+.form-status.error {
+    color: #b91c1c;
+}
+
 /* Страница благодарности после отправки формы */
 .thank-you-section {
     min-height: 100vh;

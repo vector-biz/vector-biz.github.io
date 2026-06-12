@@ -98,4 +98,35 @@ function injectLanguageSwitcher() {
 document.addEventListener('DOMContentLoaded', () => {
   injectLanguageSwitcher();
   applyTranslations(localStorage.getItem('lang') || 'uk');
+
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('form-status');
+
+  if (!form || !status) return;
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    status.textContent = 'Відправляємо повідомлення…';
+    status.className = 'form-status visible';
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.reset();
+        status.textContent = 'Повідомлення надіслано. Дякуємо!';
+        status.classList.add('success');
+      } else {
+        throw new Error('Помилка відправки. Спробуйте ще раз.');
+      }
+    } catch (error) {
+      status.textContent = error.message || 'Не вдалося надіслати повідомлення.';
+      status.classList.add('error');
+    }
+  });
 });

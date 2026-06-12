@@ -49,7 +49,7 @@
 
         <!-- ПРАВАЯ СТОРОНА: Современная симметричная форма -->
         <div class="contacts-form-side">
-            <form class="premium-form" action="https://formspree.io/f/xkoaqpvv?next=/thanks.html" method="POST" accept-charset="UTF-8">
+            <form id="contactForm" class="premium-form" action="https://formspree.io/f/xkoaqpvv" method="POST" accept-charset="UTF-8">
                 <div class="input-wrapper">
                     <input type="text" id="p-name" name="name" required placeholder=" ">
                     <label for="p-name">Ваше ім'я</label>
@@ -64,6 +64,8 @@
                     <textarea id="p-msg" name="message" required placeholder=" " rows="5"></textarea>
                     <label for="p-msg">Текст вашого повідомлення</label>
                 </div>
+
+                <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
 
                 <button type="submit" class="premium-btn">
                     <span>Надіслати повідомлення</span>

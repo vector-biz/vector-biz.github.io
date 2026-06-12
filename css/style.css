@@ -359,6 +359,89 @@ footer {
     transform: translateX(4px) translateY(-2px); /* Самолетик взлетает при наведении */
 }
 
+/* Страница благодарности после отправки формы */
+.thank-you-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(15,29,58,0.78), rgba(15,29,58,0.78)),
+                      var(--page-image, url('/foto%20fon/contacty.jpg'));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.thank-you-card {
+    max-width: 700px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 24px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+    padding: 40px;
+    text-align: center;
+}
+
+.thank-you-card .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0071e3, #1d1d1f);
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.thank-you-card h1 {
+    margin: 0 0 12px;
+    font-size: 34px;
+    line-height: 1.15;
+    color: #1d1d1f;
+}
+
+.thank-you-card p {
+    margin: 0 0 18px;
+    color: #4b5563;
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+.thank-you-card .muted {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.thank-you-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.thank-you-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    background: #1d1d1f;
+    color: #fff;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.thank-you-actions a:hover {
+    background: #0071e3;
+    transform: translateY(-1px);
+}
+
 /* Адаптивность для планшетов и телефонов */
 @media (max-width: 900px) {
     .contacts-wrapper {

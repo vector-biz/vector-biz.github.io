@@ -92,10 +92,21 @@ function injectMobileMenu() {
   toggle.setAttribute('aria-label', 'Open menu');
   toggle.innerHTML = '☰';
 
+  const closeMenu = () => {
+    linksWrapper.classList.remove('open');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
   toggle.addEventListener('click', () => {
-    linksWrapper.classList.toggle('open');
-    toggle.classList.toggle('active');
-    toggle.setAttribute('aria-expanded', String(linksWrapper.classList.contains('open')));
+    const willOpen = !linksWrapper.classList.contains('open');
+    linksWrapper.classList.toggle('open', willOpen);
+    toggle.classList.toggle('active', willOpen);
+    toggle.setAttribute('aria-expanded', String(willOpen));
+  });
+
+  linksWrapper.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
   });
 
   nav.appendChild(toggle);
